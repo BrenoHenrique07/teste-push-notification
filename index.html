@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Teste push notification</title>
 
-    <script charset="UTF-8" src="//web.webpushs.com/js/push/60ac80a275d4412a94d9fed587204db1_1.js" async></script>
-    
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.init({
+          appId: "32d9e89c-816e-4874-9e23-d2bba83e3f84",
+        });
+      });
+    </script>
+
 </head>
 <body>
 
-    <script src="./src/sp-push-worker-fb.js"></script>
 </body>
 </html>
